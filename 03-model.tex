@@ -1,0 +1,114 @@
+\section{Open-Source Internship Model}
+
+An open-source internship is a form of industry engagement which consists of at least the following three features:
+
+\begin{itemize}
+    \item Students create a new software project or contribute features or bug-fixes to an existing software project.
+    \item Someone with current or past work experience as a full-time software engineer provides mentorship and supervision to the student.
+    \item The resulting work is licensed under an Open Source Initiative approved license. \cite{OpenSourceDefinition}
+\end{itemize}
+
+Our program recruited 200 volunteer software engineers to mentor, with each mentor responsible for choosing a project to work on (meeting certain criteria which is described later).
+
+A team of 2-3 students were assigned to work together under the guidance of a mentor for 6 to 12 weeks. (The length was dependent on whether the student could use the experience for school credit if it met an hours requirement.) Students collaborated using synchronous calls, as well as asynchronously using a chat program, issue tracking software, and online code reviews.
+
+Mentors supervised and guided students in twice-weekly, hour-long check-ins, in at least two fifteen-minute one-on-one meetings with each student, and through written performance evaluations every 1-2 weeks.
+
+To reduce the time commitment required from mentors (and thus increase the number of mentors who can help), we hired TAs to provide detailed debugging help. Students could schedule time with these TAs through an online portal.
+
+We did not pay students to participate in this program,\footnote{39 students were paid a stipend by their school. We did not observe a difference in these students as reported in the results section.} nor did students pay to participate.
+
+
+\subsection{Addressing Barriers to Internships}
+
+A goal of this program was to increase equal access to an internship experience, but providing more internship opportunities would not do this alone. We identified three factors that contribute to students’ inability to secure a traditional internship and designed the program and application process to address them:
+
+\begin{enumerate}
+    \item \textbf{Lack of preparation:}
+    Many students do not adequately prepare to get internships. One study found that 37\% of students who did not receive an internship attributed it to failing to take the actions needed. \cite{kapoorBarriersSecuringIndustry2020} Students who secure internships spend a median of 3 hours per week writing applications, attending career fairs, working on personal projects, and practicing interviews, compared to a median of 1 hour for those who did not. \cite{kapoorExploringParticipationCS2020} Although GPA does not correlate with success in finding an internship, \cite{gaultUndergraduateBusinessInternships2000} 23\% of students in one study relied on GPA alone when applying for internships. \cite{kapoorExploringParticipationCS2020}
+
+    With this in mind, we designed the application with several options to allow students to demonstrate their proficiency in a way they are likely already prepared for. Specifically, reviewers considered: resume/LinkedIn, classes taken, participation in hackathons and other CS events, passion projects, a personal essay, and technical interview questions. Each aspect was optional, and we encouraged students to provide the evidence they already had.
+
+    \item \textbf{Competing priorities:}
+    A 2020 study found that 34\% of students who did not secure an internship said it was because the time to secure an internship or the time involved in carrying on an internship would conflict with a higher life priority. \cite{kapoorBarriersSecuringIndustry2020}
+    
+    Our preliminary study of students indicated common barriers were: coursework and maintaining a good GPA, being a caretaker for a family member, health concerns, or being unable to quit a job they rely on for year-round financial support. To support these students, we allowed them to choose a time commitment. Initially, we provided three options – 10, 20, or 30 hours a week – but removed the 10-hour option in the second year because it was unpopular.
+
+    \item \textbf{Low self-efficacy:}
+    In one study of 300 students who had not received an internship, nearly half had self-selected out of applying because of a lack of confidence: because they felt their academic standing was too low, because they felt their resume would not stand out, or because they otherwise thought they lacked the experience to succeed in an internship. \cite{kapoorBarriersSecuringIndustry2020}
+    
+    Social cognitive career theory suggests that students are more likely to be interested when they believe they have a chance at acceptance. \cite{lentUnifyingSocialCognitive1994} Accordingly, we partnered with professors and colleges to personally inform students they were a good fit. Once students opened the application, we offered email, phone, and live-chat support to encourage students to ask questions about eligibility and selection.
+\end{enumerate}
+
+
+\subsection{Project and Mentor Selection}
+
+Mentors were recruited using LinkedIn posts and advertisements, by reaching out to software engineering leaders, and through partnerships with other programs. Each mentor filled out a detailed application to screen their background, and then a member of program staff held an individual 15-minute phone call to evaluate their application.
+
+As part of the application, mentors proposed projects that were one of two types: improvements to an existing open source project or creation of a new open source project. Because we desired that projects teach the skills needed to succeed in the workforce, we conducted a survey of hiring managers and created a list of requirements which each project would need to meet. (Table~\ref{tab:competencies}) Program staff worked with mentors to conform projects to these requirements. Two examples of projects are presented below. A full list of projects is available on the web at \showcase.
+
+\input{tab-competencies}
+
+\subsubsection{Example of New Open-Source Project}
+\begin{quote}
+LiDAR is a way of obtaining an accurate 3D representation of a scene, often used in self driving cars to detect their surroundings.
+
+Most analysis done on data like this is done without visualizing all the data together, because it's in different formats/too large to efficiently visualize in real time. This project would involve taking this data, converting it to a standard format that Cesium's pipeline can ingest (likely using Python since it has many of the helper libraries you'll need), and then building an application to visualize it in 3D using Cesium's JavaScript library.
+\end{quote}
+
+\subsubsection{Example of Improving an Existing Open-Source Project}
+\begin{quote}
+Crates.io is the default, public package registry used by rust developers everywhere. Developers often want the means to privately publish crates (rust packages), so they can continue to follow best practices to version and release software internal to their teams or businesses.
+
+Current solutions for a private crates registry are hard to find and very costly. However, there exists an open source implementation of the crates registry API one can easily run on their local machine - "Alexandrie".
+
+In this internship, we will build on Alexandrie to provide an open-source solution that others can use to more easily deploy a private crates registry to cloud providers. We will be using docker, and developing the reference solution to be deployable to a Kubernetes cluster in one of the major cloud providers.
+\end{quote}
+
+
+\subsection{Student Selection}
+
+To select students for the program, the admissions team (comprising mentors and program staff) read each application\footnote{Some students who applied for the program were recommended by faculty at a partner college. These "direct admits" did not go through this selection process. We did not observe any differences between these students and those accepted through the open application.} and first evaluated whether the applicant met the technical bar:
+
+\begin{itemize}
+    \item Demonstrated passion for CS (e.g., by taking classes, joining clubs, working on projects, attending events, or a personal statement)
+    \item Demonstrated knowledge in algorithms and data structures
+    \item Ability to read and understand code written by others
+    \item Ability to do independent research to solve a problem
+    \item Knowledge of collaboration tools such as Git
+\end{itemize}
+
+Secondly, the admissions team evaluated the student’s access to internship opportunities. Students who were closer to graduating with limited experience were favored.
+Application were scored from 1-5, and the admissions software continuously ranked applicants based on the number of scores and a margin of error to account for differing numbers of scores. Admissions were offered to the top-ranked students as space became available, ending two weeks before the program.
+
+
+\subsection{Matching}
+Students matched with a mentor/project in two phases.
+
+First, we used the Elastic search engine to produce a ranked list of 25 recommendations for each student, using technology proficiency, interest, and timezone information from student/mentor applications. Students chose their top six projects from this list and ranked them in order of preference. The system also evaluated the popularity of projects: as more students selected projects, they became less likely to appear in others’ recommendations.
+
+Second, a modified Gale-Shapely algorithm \cite{galeCollegeAdmissionsStability1962} was used to match students to projects. Students and mentors received an email introduction several days before the start of the program.
+
+
+
+\subsection{Additional Features of Internships}
+
+Although all internships involve supervised experiential learning guided by industry, many leading companies provide other opportunities for their interns, \cite{cunninghamBuildingPremierInternship2012} which we attempted to replicate:
+
+\begin{itemize}
+    \item \textbf{Interview experience:} The process of applying for an internship helps students practice the same skills necessary to secure full-time employment later.
+    
+    Although we did not conduct individual interviews as part of admissions, students were able to use a web portal to request interview feedback and practice interviews with software engineers, hiring managers, and HR employees.
+
+    \item \textbf{Professional networking and advice:} Many successful internships provide students a chance to meet both near-peers and leaders, allowing students to gain career advice beyond what their school can offer.
+    
+    Students in our program were able to connect with their mentors in dedicated 1-1 sessions, and we also hosted 2-5 career panels each week during the program.
+    
+    \item \textbf{Technical training:} Some companies offer in-house training or the ability to attend technical talks, in order to increase the breadth of industry-connected skills the interns know.
+    
+    During the program we hosted 1-3 technical talks each weekday.
+    
+    \item \textbf{Final presentation:} Presentations help interns develop skills and gain confidence in technical presentations.
+    
+    At the end of the program, students created "tech talks": 10-15 minute presentations describing the technology used, to be shared with potential employers. Some mentors also invited students to present to co-workers.
+\end{itemize}
